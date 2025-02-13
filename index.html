@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+# 生成優化版 HTML 賀卡文件，修正文字顏色、背景透明度、行距等
+optimized_html_content = """<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>情人節電子賀卡</title>
     <style>
+        /* 設定背景圖片 */
         body {
             margin: 0;
             padding: 0;
@@ -14,7 +16,7 @@
             height: 100vh;
             background: url('background.jpg') no-repeat center center/cover;
             font-family: 'Dancing Script', cursive;
-            color: #222; /* 深色文字 */
+            color: #4A4A4A; /* 深棕色，提升對比度 */
             text-align: center;
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -24,23 +26,25 @@
             to { opacity: 1; }
         }
 
+        /* 優化的文字區塊 */
         .card {
-            background: rgba(255, 255, 255, 0.6); /* 半透明白色背景 */
+            background: rgba(255, 255, 255, 0.85); /* 減少透明度，讓文字更清楚 */
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 增加陰影，提升可讀性 */
             backdrop-filter: blur(10px);
-            max-width: 400px;
+            max-width: 380px; /* 讓內容更集中 */
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             margin-bottom: 15px;
         }
 
         p {
             font-size: 20px;
-            line-height: 1.6;
+            line-height: 1.4; /* 讓行距更緊湊 */
         }
 
         .signature {
@@ -54,7 +58,7 @@
 <body>
     <div class="card">
         <h1>💖 Happy Valentine’s Day! 💖</h1>
-        <p>這段時間看到你慢慢恢復心情，真的替你感到開心。<br>
+        <p>這段時間看到妳慢慢恢復心情，替你感到開心~<br>
         希望未來的每一天，你都能擁抱生活的美好，<br>
         讓陽光和溫暖常伴在你身邊。</p>
 
@@ -63,8 +67,18 @@
         真的很開心。或許這份久違的緣分，<br>
         就是最特別的禮物吧。💙</p>
 
-        <p class="signature">— 孝賢</p>
+        <p class="signature">— BR.Sean Xiu by 2025/02/14 <3 </p>
     </div>
 </body>
 </html>
+"""
 
+# 定義 HTML 文件路徑
+optimized_html_file_path = "/mnt/data/index_optimized.html"
+
+# 儲存 HTML 文件
+with open(optimized_html_file_path, "w", encoding="utf-8") as f:
+    f.write(optimized_html_content)
+
+# 返回 HTML 文件路徑
+optimized_html_file_path
