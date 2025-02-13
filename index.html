@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情人節電子賀卡</title>
+    <style>
+        /* 設定背景圖片 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center/cover;
+            font-family: 'Dancing Script', cursive;
+            color: white;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* 淡入動畫 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* 賀卡透明區塊 */
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1>💖 Happy Valentine’s Day! 💖</h1>
+        <p>這段時間看到你慢慢恢復心情，真的替你感到開心。<br>
+        希望未來的每一天，你都能擁抱生活的美好，<br>
+        讓陽光和溫暖常伴在你身邊。</p>
+
+        <p>有時候覺得，人生的相遇真的很奇妙。<br>
+        能在這個時間點再次認識現在的你，<br>
+        真的很開心。或許這份久違的緣分，<br>
+        就是最特別的禮物吧。💙</p>
+
+        <p class="signature">— 孝賢</p>
+    </div>
+</body>
+</html>
